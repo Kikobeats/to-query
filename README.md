@@ -1,5 +1,3 @@
-# to-query
-
 <p align="center">
   <br>
   <br>

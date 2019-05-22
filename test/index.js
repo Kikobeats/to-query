@@ -1,12 +1,12 @@
 'use strict'
 
 const test = require('ava')
-const superQuery = require('..')
+const createQuery = require('..')
 
 const isUrlHttp = require('is-url-http')
 
 test('url is required', t => {
-  const toQuery = superQuery()
+  const toQuery = createQuery()
 
   const error = t.throws(() => {
     toQuery()
@@ -19,22 +19,32 @@ test('url is required', t => {
 })
 
 test('detect query parameters', t => {
-  const toQuery = superQuery()
+  const toQuery = createQuery()
   t.deepEqual(toQuery('/?foo=bar'), { foo: 'bar' })
 })
 
 test('required fields', t => {
-  const toQuery = superQuery({
+  const toQuery = createQuery({
     url: {
       required: true
     }
   })
 
-  toQuery('/?foo=bar')
-
-  const error = t.throws(() => {
+  const genericError = t.throws(() => {
     toQuery('/?foo=bar')
   }, TypeError)
+
+  t.is(genericError.message, 'Expected `string` for `url`, got `undefined`')
+
+  const error = t.throws(
+    () =>
+      createQuery({
+        url: {
+          required: 'You need to provide an URL'
+        }
+      })('/?foo=bar'),
+    TypeError
+  )
 
   t.is(error.message, 'You need to provide an URL')
 
@@ -45,7 +55,7 @@ test('required fields', t => {
 })
 
 test('validation fields', t => {
-  const toQuery = superQuery({
+  const toQuery = createQuery({
     url: {
       type: String,
       validate: {
@@ -63,7 +73,7 @@ test('validation fields', t => {
 })
 
 test('default values', t => {
-  const toQuery = superQuery({
+  const toQuery = createQuery({
     userAgent: {
       default: 'foo'
     }

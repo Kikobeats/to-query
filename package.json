@@ -1,7 +1,7 @@
 {
-  "name": "superquery",
+  "name": "to-query",
   "description": "Get query object from a request url",
-  "homepage": "https://nicedoc.io/Kikobeats/superquery",
+  "homepage": "https://nicedoc.io/Kikobeats/to-query",
   "version": "0.0.0",
   "main": "src/index.js",
   "author": {
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kikobeats/superquery.git"
+    "url": "git+https://github.com/Kikobeats/to-query.git"
   },
   "bugs": {
-    "url": "https://github.com/Kikobeats/superquery/issues"
+    "url": "https://github.com/Kikobeats/to-query/issues"
   },
   "keywords": [
     "api",

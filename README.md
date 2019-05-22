@@ -1,19 +1,19 @@
-# superquery
+# to-query
 
 <p align="center">
   <br>
   <br>
-  <img src="logo.png" alt="superquery">
+  <img src="logo.png" alt="to-query">
   <br>
   <br>
 </p>
 
-![Last version](https://img.shields.io/github/tag/Kikobeats/superquery.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/Kikobeats/superquery/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/superquery)
-[![Coverage Status](https://img.shields.io/coveralls/Kikobeats/superquery.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/superquery)
-[![Dependency status](https://img.shields.io/david/Kikobeats/superquery.svg?style=flat-square)](https://david-dm.org/Kikobeats/superquery)
-[![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/superquery.svg?style=flat-square)](https://david-dm.org/Kikobeats/superquery#info=devDependencies)
-[![NPM Status](https://img.shields.io/npm/dm/superquery.svg?style=flat-square)](https://www.npmjs.org/package/superquery)
+![Last version](https://img.shields.io/github/tag/Kikobeats/to-query.svg?style=flat-square)
+[![Build Status](https://img.shields.io/travis/Kikobeats/to-query/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/to-query)
+[![Coverage Status](https://img.shields.io/coveralls/Kikobeats/to-query.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/to-query)
+[![Dependency status](https://img.shields.io/david/Kikobeats/to-query.svg?style=flat-square)](https://david-dm.org/Kikobeats/to-query)
+[![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/to-query.svg?style=flat-square)](https://david-dm.org/Kikobeats/to-query#info=devDependencies)
+[![NPM Status](https://img.shields.io/npm/dm/to-query.svg?style=flat-square)](https://www.npmjs.org/package/to-query)
 
 > Get query object from a request url as input.
 
@@ -35,16 +35,15 @@ Also it supports required fields, validation, error handling and more.
 ## Installation
 
 ```bash
-$ npm install superquery --save
+$ npm install to-query --save
 ```
 
 ## Get Started
 
-**superquery** is a convenient way for getting query parameters from any request url as input.
+**to-query** is a convenient way for getting query parameters from any request url as input.
 
 ```js
-const superQuery = require('superquery')
-const toQuery = superQuery()
+const toQuery = require('to-query')()
 
 const query = toQuery('/?foo=bar') // => { foo: 'bar' }
 ```
@@ -55,9 +54,9 @@ You can associate a default value to use in case the value is not provided:
 
 ```js
 const userAgentString = require('ua-string')
-const superQuery = require('superquery')
+const createQuery = require('to-query')
 
-const toQuery = superQuery({
+const toQuery = createQuery({
   userAgent: {
     default: userAgentString
   }
@@ -72,9 +71,9 @@ toQuery('/?user_agent=googlebot') // =>  { userAgent: 'googlebot' }
 Declaring fields as **required** means it throw an error in case of non presence:
 
 ```js
-const superQuery = require('superquery')
+const createQuery = require('to-query')
 
-const toQuery = superQuery({
+const toQuery = createQuery({
   url: {
     required: true
   }
@@ -89,9 +88,9 @@ toQuery('/?foo=bar')
 In case you provide an `string` instead of a `boolean` it will be used as the message to show under error:
 
 ```js
-const superQuery = require('superquery')
+const createQuery = require('to-query')
 
-const toQuery = superQuery({
+const toQuery = createQuery({
   url: {
     required: 'You need to provide an URL.'
   }
@@ -107,9 +106,9 @@ In case you need granual control ver fields, you can declare any kind of validat
 
 ```js
 const isUrlHttp = require('is-url-http')
-const superQuery = require('superquery')
+const createQuery = require('to-query')
 
-const toQuery = superQuery({
+const toQuery = createQuery({
   url: {
     validate: {
       validator: isUrlHttp,
@@ -124,17 +123,17 @@ toQuery('/?url=kikobeats.com')
 
 ## Integration
 
-**superquery** has been designed to do *just one thing well*.
+**to-query** has been designed to do *just one thing well*.
 
-In this aspect, **superquery** is *framework agnostic*, giving you freedom to connect it with the rest of your software.
+In this aspect, **to-query** is *framework agnostic*, giving you freedom to connect it with the rest of your software.
 
 In case you want ot use it with any HTTP server (Express, Micro, Koa, Hapi, Fastify,...) just provide the url of the request.
 
 ```js
-const superQuery = require('superquery')()
+const toQuery = require('to-query')()
 
 module.exports = (req, res) => {
-  req.query = superQuery(req.url)
+  req.query = createQuery(req.url)
   res.end('Your query is', req.query)
 }
 ```
@@ -143,9 +142,9 @@ That's all!
 
 ## API
 
-### `toQuery = superQuery([options])`
+### `toQuery = to-query([options])`
 
-It creates **superquery** instance.
+It creates **to-query** instance.
 
 Any option provided will be passed to [`osom`](https://www.npmjs.com/package/osom), check the [documentation](https://osom.js.org) to know more.
 
@@ -160,7 +159,7 @@ The serialized URL to convert into query object.
 
 ## License
 
-**superquery** © [Kiko Beats](https://kikobeats.com), released under the [MIT](https://github.com/Kikobeats/superquery/blob/master/LICENSE.md) License.<br>
-Authored and maintained by Kiko Beats with help from [contributors](https://github.com/Kikobeats/superquery/contributors).
+**to-query** © [Kiko Beats](https://kikobeats.com), released under the [MIT](https://github.com/Kikobeats/to-query/blob/master/LICENSE.md) License.<br>
+Authored and maintained by Kiko Beats with help from [contributors](https://github.com/Kikobeats/to-query/contributors).
 
 > [kikobeats.com](https://kikobeats.com) · GitHub [Kiko Beats](https://github.com/Kikobeats) · Twitter [@Kikobeats](https://twitter.com/Kikobeats)

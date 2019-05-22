@@ -27,7 +27,7 @@ eg. `/?user_agent=googlebot` → `{ userAgent: 'googlebot' }`
 eg. `/?plan_id=123` → `{ planId: 123 }`
 - Friendly boolean values.<br/>
 eg. `/is_enabled` → `{ iEnabled: true }`
-- Declare default value.<br/>
+- Declare default values.<br/>
 eg. `/?` → `{ accept: '*' }`
 
 Also it supports required fields, validation, error handling and more.

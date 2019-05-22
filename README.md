@@ -63,8 +63,8 @@ const toQuery = superQuery({
   }
 })
 
-const query = toQuery('/?') // => { userAgent: 'Mozilla/5.0 (Macintosh; Intel…' }
-const query = toQuery('/?user_agent=googlebot') // =>  { userAgent: 'googlebot' }
+toQuery('/?') // => { userAgent: 'Mozilla/5.0 (Macintosh; Intel…' }
+toQuery('/?user_agent=googlebot') // =>  { userAgent: 'googlebot' }
 ```
 
 ### Required Data Fields
@@ -74,13 +74,13 @@ Declaring fields as **required** means it throw an error in case of non presence
 ```js
 const superQuery = require('superquery')
 
-const toQuery = superQuery({ 
+const toQuery = superQuery({
   url: {
     required: true
   }
 })
 
-const query = toQuery('/?foo=bar)
+toQuery('/?foo=bar')
 // => TypeError: Expected `string` for `url`, got `undefined`
 ```
 
@@ -91,19 +91,19 @@ In case you provide an `string` instead of a `boolean` it will be used as the me
 ```js
 const superQuery = require('superquery')
 
-const toQuery = superQuery({ 
+const toQuery = superQuery({
   url: {
     required: 'You need to provide an URL.'
   }
 })
 
-const query = toQuery('/?foo=bar) 
+toQuery('/?foo=bar')
 // => TypeError: You need to provide an URL.
 ```
 
 ### Validate Data Fields
 
-In case you need granual control ver fields, you can declare any kind of validation, making easy connect with other packages. 
+In case you need granual control ver fields, you can declare any kind of validation, making easy connect with other packages.
 
 ```js
 const isUrlHttp = require('is-url-http')
@@ -117,8 +117,8 @@ const toQuery = superQuery({
     }
   }
 })
-  
-const query = toQuery('/?url=kikobeats.com) 
+
+toQuery('/?url=kikobeats.com')
 // => TypeError: The value 'kikobeats.com' is not a valid http(s) URL.
 ```
 

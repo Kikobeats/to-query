@@ -113,7 +113,7 @@ toQuery('/?url=kikobeats.com')
 // => TypeError: The value 'kikobeats.com' is not a valid http(s) URL.
 ```
 
-## Integration
+## Usage
 
 **to-query** has been designed to do *just one thing well*.
 

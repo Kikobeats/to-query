@@ -18,7 +18,7 @@ eg. `/?user_agent=googlebot` → `{ userAgent: 'googlebot' }`
 - Auto cast values to native types.<br/>
 eg. `/?plan_id=123` → `{ planId: 123 }`
 - Friendly boolean values.<br/>
-eg. `/is_enabled` → `{ iEnabled: true }`
+eg. `/is_enabled` → `{ isEnabled: true }`
 - Declare default values.<br/>
 eg. `/?` → `{ accept: '*' }`
 

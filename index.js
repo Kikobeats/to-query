@@ -9,7 +9,7 @@ const mapper = require('./map')
 
 const getQuery = flow([parse, normalize])
 
-const toQuery = ({ map = mapper, ...opts } = {}) => {
+module.exports = ({ map = mapper, ...opts } = {}) => {
   const validator = isEmpty(opts) ? noop : osom(opts, { type: String })
 
   return url => {
@@ -17,9 +17,3 @@ const toQuery = ({ map = mapper, ...opts } = {}) => {
     return { ...validator(query), ...query }
   }
 }
-
-toQuery.map = mapper
-toQuery.normalize = normalize
-toQuery.parse = parse
-
-module.exports = toQuery

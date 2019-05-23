@@ -48,7 +48,10 @@
     "node": ">= 8"
   },
   "files": [
-    "src"
+    "index.js",
+    "map.js",
+    "normalize.js",
+    "parse.js"
   ],
   "scripts": {
     "clean": "rm -rf node_modules",

@@ -1,36 +1,27 @@
 'use strict'
 
-const {
-  set,
-  isArray,
-  isObject,
-  concat,
-  reduce,
-  camelCase,
-  flow
-} = require('lodash')
-
+const { set, isArray, isObject, concat, reduce, flow } = require('lodash')
 const autoParse = require('auto-parse')
 
-const normalize = value => {
-  if (isArray(value)) return normalizeArray(value)
-  if (isObject(value)) return normalizeObject(value)
+const castValues = value => {
+  if (isArray(value)) return castArrayValues(value)
+  if (isObject(value)) return castObjectValues(value)
   return autoParse(value)
 }
 
-const normalizeObject = query =>
+const castObjectValues = query =>
   reduce(
     query,
     (acc, value, key) => {
-      return { ...acc, [camelCase(key)]: normalize(value) }
+      return { ...acc, [key]: castValues(value) }
     },
     {}
   )
 
-const normalizeArray = query =>
-  reduce(query, (acc, value) => concat(acc, normalize(value)), [])
+const castArrayValues = query =>
+  reduce(query, (acc, value) => concat(acc, castValues(value)), [])
 
-const normalizeBooleanValues = query =>
+const sanetizeBooleanValues = query =>
   reduce(
     query,
     (acc, value, key) => {
@@ -41,4 +32,4 @@ const normalizeBooleanValues = query =>
     {}
   )
 
-module.exports = flow([normalizeBooleanValues, normalize])
+module.exports = flow([sanetizeBooleanValues, castValues])

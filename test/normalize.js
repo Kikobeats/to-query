@@ -1,7 +1,7 @@
 'use strict'
 
 const test = require('ava')
-const { normalize } = require('..')
+const normalize = require('../normalize')
 
 test('booleans', t => {
   t.deepEqual(normalize({ foo: '' }), { foo: true })

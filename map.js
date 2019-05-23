@@ -12,3 +12,4 @@ const mapKeysDeep = (obj, fn) =>
 const camelcaseKey = (value, key) => camelCase(key)
 
 module.exports = obj => mapKeysDeep(obj, camelcaseKey)
+module.exports.mapKeysDeep = mapKeysDeep

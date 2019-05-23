@@ -1,7 +1,7 @@
 'use strict'
 
 const test = require('ava')
-const { parse } = require('..')
+const parse = require('../parse')
 
 test('to object', t => {
   t.deepEqual(parse('/?foo=bar'), {

@@ -1,4 +1,11 @@
-# `to-query`
+<div align="center">
+	<br>
+	<br>
+	<img width="360" src="media/logo.png">
+	<br>
+	<br>
+	<br>
+</div>
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/to-query.svg?style=flat-square)
 [![Build Status](https://img.shields.io/travis/com/Kikobeats/to-query/master.svg?style=flat-square)](https://travis-ci.com/Kikobeats/to-query)

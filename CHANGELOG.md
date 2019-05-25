@@ -1,3 +1,13 @@
+<a name="1.3.0"></a>
+# 1.3.0 (2019-05-25)
+
+* feat: allow pass an object ([25e7664](https://github.com/Kikobeats/to-query/commit/25e7664))
+* docs: tweaks ([90d61ac](https://github.com/Kikobeats/to-query/commit/90d61ac))
+* Update README.md ([91427de](https://github.com/Kikobeats/to-query/commit/91427de))
+* build: add project logo ([650cd73](https://github.com/Kikobeats/to-query/commit/650cd73)), closes [#2](https://github.com/Kikobeats/to-query/issues/2)
+
+
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.

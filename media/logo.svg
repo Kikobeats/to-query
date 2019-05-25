@@ -7,14 +7,21 @@
         <g id="Logo" transform="translate(-38.000000, -28.000000)">
             <g id="Group-2" transform="translate(38.000000, 28.000000)">
                 <text id="/?url=user_agent=mos" font-family="OperatorMonoLig-Book, Operator Mono Lig" font-size="8" font-weight="300">
-                    <tspan x="15" y="100" fill="#303030" fill-opacity="0.5">/?url=user_agent=mosaic&amp;is_enabled </tspan>
-                    <tspan x="169" y="100" font-family="Monaco" font-weight="normal" fill="#303030" fill-opacity="0.5">→</tspan>
-                    <tspan x="173.800781" y="100" fill="#303030" fill-opacity="0.5"> </tspan>
-                    <tspan x="178.200781" y="100" fill="#000000" fill-opacity="0.6">{ userAgent: </tspan>
+                    <tspan x="15" y="100" fill="#212529">/?url=user_agent=mosaic&amp;is_enabled </tspan>
+                    <tspan x="169" y="100" font-family="Monaco" font-weight="normal" fill="#000000">→</tspan>
+                    <tspan x="173.800781" y="100" fill="#212529"> </tspan>
+                    <tspan x="178.200781" y="100" fill="#868E96">{ </tspan>
+                    <tspan x="187.000781" y="100" fill="#212529">userAgent</tspan>
+                    <tspan x="226.600781" y="100" fill="#868E96">:</tspan>
+                    <tspan x="231.000781" y="100" fill="#212529"> </tspan>
                     <tspan x="235.400781" y="100" fill="#FF922B">'mosaic'</tspan>
-                    <tspan x="270.600781" y="100" fill="#000000" fill-opacity="0.6">, isEnabled: </tspan>
+                    <tspan x="270.600781" y="100" fill="#ADB5BD">,</tspan>
+                    <tspan x="275.000781" y="100" fill="#212529"> isEnabled</tspan>
+                    <tspan x="319.000781" y="100" fill="#868E96">:</tspan>
+                    <tspan x="323.400781" y="100" fill="#212529"> </tspan>
                     <tspan x="327.800781" y="100" fill="#FF6B6B">true</tspan>
-                    <tspan x="345.400781" y="100" fill="#000000" fill-opacity="0.6"> }</tspan>
+                    <tspan x="345.400781" y="100" fill="#000000" fill-opacity="0.6"> </tspan>
+                    <tspan x="349.800781" y="100" fill="#868E96">}</tspan>
                     <tspan x="354.200781" y="100" fill="#303030" fill-opacity="0.5"></tspan>
                 </text>
                 <g id="to-query_logo">

@@ -145,15 +145,6 @@ That's all!
 
 It creates **to-query** instance.
 
-### `toQuery`
-
-#### url
-
-*Required*<br/>
-Type: `string`
-
-The serialized URL to convert into query object.
-
 #### options
 
 Any option provided will be passed to [`osom`](https://www.npmjs.com/package/osom), check the [documentation](https://osom.js.org) to know more.
@@ -167,6 +158,15 @@ Type: `function`<br/>
 A function to run as mapper *before* process the url.
 
 The default map just convert keys into camel case.
+
+### `toQuery(input)`
+
+#### input
+
+*Required*<br/>
+Type: `string|object`
+
+The input value to convert into a query object.
 
 ## License
 

@@ -1,3 +1,31 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.3.1](https://github.com/Kikobeats/to-query/compare/v1.2.2...v1.3.1) (2019-05-26)
+
+
+### Build System
+
+* normalize object provided ([2db0999](https://github.com/Kikobeats/to-query/commit/2db0999))
+
+
+
+## 1.3.0 (2019-05-25)
+
+
+### Build System
+
+* add project logo ([650cd73](https://github.com/Kikobeats/to-query/commit/650cd73)), closes [#2](https://github.com/Kikobeats/to-query/issues/2)
+* add project logo ([#3](https://github.com/Kikobeats/to-query/issues/3)) ([aa9c67b](https://github.com/Kikobeats/to-query/commit/aa9c67b))
+
+
+### Features
+
+* allow pass an object ([25e7664](https://github.com/Kikobeats/to-query/commit/25e7664))
+
+
+
 <a name="1.3.0"></a>
 # 1.3.0 (2019-05-25)
 

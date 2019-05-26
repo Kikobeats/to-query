@@ -13,7 +13,7 @@ module.exports = ({ map = mapper, ...opts } = {}) => {
   const validator = isEmpty(opts) ? noop : osom(opts, { type: String })
 
   return opts => {
-    const query = map(isObject(opts) ? opts : getQuery(opts))
+    const query = map(isObject(opts) ? normalize(opts) : getQuery(opts))
     return { ...validator(query), ...query }
   }
 }

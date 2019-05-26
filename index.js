@@ -14,6 +14,6 @@ module.exports = ({ map = mapper, ...opts } = {}) => {
 
   return opts => {
     const query = map(isObject(opts) ? normalize(opts) : getQuery(opts))
-    return { ...validator(query), ...query }
+    return { ...query, ...validator(query) }
   }
 }

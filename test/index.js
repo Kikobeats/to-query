@@ -82,3 +82,16 @@ test('default values', t => {
   t.deepEqual(toQuery('/?foo=bar'), { foo: 'bar', userAgent: 'foo' })
   t.deepEqual(toQuery('/?user_agent=googlebot'), { userAgent: 'googlebot' })
 })
+
+test('transform field', t => {
+  const split = str => str.split(',').map(item => item.trim())
+
+  t.deepEqual(
+    createQuery({ filter: { transform: [split] } })('/?filter=foo,bar'),
+    { filter: ['foo', 'bar'] }
+  )
+  t.deepEqual(
+    createQuery({ filter: { transform: split } })('/?filter=foo,bar'),
+    { filter: ['foo', 'bar'] }
+  )
+})

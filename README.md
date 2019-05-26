@@ -47,9 +47,9 @@ const toQuery = require('to-query')()
 const query = toQuery('/?foo=bar') // => { foo: 'bar' }
 ```
 
-### Default Data Fields
+### Default
 
-You can associate a default value to use in case the value is not provided:
+Sometimes you need to associate a default value to be used in case if one is not provided:
 
 ```js
 const userAgentString = require('ua-string')
@@ -65,7 +65,7 @@ toQuery('/?') // => { userAgent: 'Mozilla/5.0 (Macintosh; Intel…' }
 toQuery('/?user_agent=googlebot') // =>  { userAgent: 'googlebot' }
 ```
 
-### Required Data Fields
+### Required
 
 Declaring fields as **required** means it throw an error in case of non presence:
 
@@ -99,9 +99,9 @@ toQuery('/?foo=bar')
 // => TypeError: You need to provide an URL.
 ```
 
-### Validate Data Fields
+### Validate
 
-In case you need granual control ver fields, you can declare any kind of validation, making easy connect with other packages.
+If you need granular control for type checking the shape of value in something you expect, you can declare any kind of validation, making easy connect with other packages:
 
 ```js
 const isUrlHttp = require('is-url-http')
@@ -118,6 +118,27 @@ const toQuery = createQuery({
 
 toQuery('/?url=kikobeats.com')
 // => TypeError: The value 'kikobeats.com' is not a valid http(s) URL.
+```
+
+### Transform
+
+You can mutate an individual value, using one or more functions to produce the final output:
+
+```js
+const createQuery = require('to-query')
+
+const split = str => str.split(',').map(item => item.trim())
+
+const toQuery = createQuery({
+  url: {
+    filters: {
+      transform: [split]
+    }
+  }
+})
+
+toQuery('/?filters=prerender,auto,resize')
+// => { filters: ['prerender', 'auto', 'resize'] }
 ```
 
 ## Usage

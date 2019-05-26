@@ -23,7 +23,7 @@
   "dependencies": {
     "auto-parse": "~1.7.0",
     "lodash": "~4.17.11",
-    "osom": "~3.0.2"
+    "osom": "~3.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",

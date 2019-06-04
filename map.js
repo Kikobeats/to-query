@@ -1,7 +1,6 @@
 'use strict'
 
 const { camelCase } = require('lodash')
-const mapObject = require('map-obj')
+const mapKeysDeep = require('@kikobeats/map-keys-deep')
 
-module.exports = obj =>
-  mapObject(obj, (key, value) => [camelCase(key), value], { deep: true })
+module.exports = obj => mapKeysDeep(obj, (value, key) => camelCase(key))

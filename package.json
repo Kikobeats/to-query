@@ -21,7 +21,7 @@
     "query"
   ],
   "dependencies": {
-    "@kikobeats/map-keys-deep": "~1.0.0",
+    "@kikobeats/map-keys-deep": "~1.0.2",
     "auto-parse": "~1.7.0",
     "lodash": "~4.17.11",
     "osom": "~3.0.3"

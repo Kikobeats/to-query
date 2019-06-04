@@ -2,7 +2,7 @@
   "name": "to-query",
   "description": "Get query object from a request url",
   "homepage": "https://nicedoc.io/Kikobeats/to-query",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "main": "index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
@@ -98,5 +98,8 @@
         "git add"
       ]
     }
-  }
+  },
+  "contributors": [
+    "Haroen Viaene <fingebimus@me.com>"
+  ]
 }

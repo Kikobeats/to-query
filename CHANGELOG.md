@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Kikobeats/to-query/compare/v1.4.0...v1.5.0) (2019-06-04)
+
+
+### Build System
+
+* add automate-release workflow ([61872ef](https://github.com/Kikobeats/to-query/commit/61872ef))
+* update dependencies ([383d08a](https://github.com/Kikobeats/to-query/commit/383d08a))
+* use map-keys-deep instead of map-obj ([37b6228](https://github.com/Kikobeats/to-query/commit/37b6228))
+
+
+### Features
+
+* use map-obj dependency ([25cbc39](https://github.com/Kikobeats/to-query/commit/25cbc39))
+
+
+
 ## [1.4.0](https://github.com/Kikobeats/to-query/compare/v1.3.2...v1.4.0) (2019-05-26)
 
 

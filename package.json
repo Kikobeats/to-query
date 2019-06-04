@@ -9,6 +9,12 @@
     "name": "Kiko Beats",
     "url": "https://kikobeats.com"
   },
+  "contributors": [
+    {
+      "name": "Haroen Viaene",
+      "email": "fingebimus@me.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kikobeats/to-query.git"
@@ -21,7 +27,7 @@
     "query"
   ],
   "dependencies": {
-    "@kikobeats/map-keys-deep": "~1.0.2",
+    "@kikobeats/map-keys-deep": "~1.0.3",
     "auto-parse": "~1.7.0",
     "lodash": "~4.17.11",
     "osom": "~3.0.3"
@@ -98,8 +104,5 @@
         "git add"
       ]
     }
-  },
-  "contributors": [
-    "Haroen Viaene <fingebimus@me.com>"
-  ]
+  }
 }

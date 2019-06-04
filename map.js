@@ -1,15 +1,7 @@
 'use strict'
 
-const { camelCase, isPlainObject, mapKeys, mapValues } = require('lodash')
+const { camelCase } = require('lodash')
+const mapObject = require('map-obj')
 
-const mapKeysDeep = (obj, fn) =>
-  Array.isArray(obj)
-    ? obj.map(item => mapKeysDeep(item, fn))
-    : isPlainObject(obj)
-      ? mapValues(mapKeys(obj, fn), value => mapKeysDeep(value, fn))
-      : obj
-
-const camelcaseKey = (value, key) => camelCase(key)
-
-module.exports = obj => mapKeysDeep(obj, camelcaseKey)
-module.exports.mapKeysDeep = mapKeysDeep
+module.exports = obj =>
+  mapObject(obj, (key, value) => [camelCase(key), value], { deep: true })

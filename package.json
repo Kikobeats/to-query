@@ -10,7 +10,10 @@
     "url": "https://kikobeats.com"
   },
   "contributors": [
-    "Haroen Viaene <fingebimus@me.com>"
+    {
+      "name": "Haroen Viaene",
+      "email": "fingebimus@me.com"
+    }
   ],
   "repository": {
     "type": "git",
@@ -87,19 +90,17 @@
     }
   },
   "lint-staged": {
-    "linters": {
-      "package.json": [
-        "finepack",
-        "git add"
-      ],
-      "*.js": [
-        "prettier-standard",
-        "git add"
-      ],
-      "*.md": [
-        "standard-markdown",
-        "git add"
-      ]
-    }
+    "package.json": [
+      "finepack",
+      "git add"
+    ],
+    "*.js": [
+      "prettier-standard",
+      "git add"
+    ],
+    "*.md": [
+      "standard-markdown",
+      "git add"
+    ]
   }
 }

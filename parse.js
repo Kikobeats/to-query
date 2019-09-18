@@ -1,7 +1,17 @@
 'use strict'
 
 const { parse: parseQuery } = require('querystring')
-const { parse: parseUrl } = require('url')
 const { flow } = require('lodash')
+const { URL } = require('url')
 
-module.exports = flow([url => parseUrl(url).query, parseQuery])
+module.exports = flow([
+  url => {
+    if (!url) {
+      throw TypeError(
+        `Expected \`url\` to be of type \`string\` but received type \`${typeof url}\``
+      )
+    }
+    return new URL(url, 'http://localhost').search.substring(1)
+  },
+  parseQuery
+])

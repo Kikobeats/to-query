@@ -14,7 +14,7 @@ test('url is required', t => {
 
   t.is(
     error.message,
-    'The "url" argument must be of type string. Received type undefined'
+    'Expected `url` to be of type `string` but received type `undefined`'
   )
 })
 

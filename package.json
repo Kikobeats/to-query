@@ -10,7 +10,10 @@
     "url": "https://kikobeats.com"
   },
   "contributors": [
-    "Haroen Viaene <fingebimus@me.com>"
+    {
+      "name": "Haroen Viaene",
+      "email": "fingebimus@me.com"
+    }
   ],
   "repository": {
     "type": "git",
@@ -42,6 +45,7 @@
     "husky": "latest",
     "is-url-http": "latest",
     "lint-staged": "latest",
+    "nanobench": "latest",
     "npm-check-updates": "latest",
     "nyc": "latest",
     "prettier-standard": "latest",

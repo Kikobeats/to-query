@@ -8,9 +8,12 @@ const isUrlHttp = require('is-url-http')
 test('url is required', t => {
   const toQuery = createQuery()
 
-  const error = t.throws(() => {
-    toQuery()
-  }, TypeError)
+  const error = t.throws(
+    () => {
+      toQuery()
+    },
+    { instanceOf: TypeError }
+  )
 
   t.is(
     error.message,
@@ -30,9 +33,12 @@ test('required fields', t => {
     }
   })
 
-  const genericError = t.throws(() => {
-    toQuery('/?foo=bar')
-  }, TypeError)
+  const genericError = t.throws(
+    () => {
+      toQuery('/?foo=bar')
+    },
+    { instanceOf: TypeError }
+  )
 
   t.is(genericError.message, 'Expected `string` for `url`, got `undefined`')
 
@@ -43,7 +49,7 @@ test('required fields', t => {
           required: 'You need to provide an URL'
         }
       })('/?foo=bar'),
-    TypeError
+    { instanceOf: TypeError }
   )
 
   t.is(error.message, 'You need to provide an URL')
@@ -65,9 +71,12 @@ test('validation fields', t => {
     }
   })
 
-  const error = t.throws(() => {
-    toQuery('/?url=bar')
-  }, TypeError)
+  const error = t.throws(
+    () => {
+      toQuery('/?url=bar')
+    },
+    { instanceOf: TypeError }
+  )
 
   t.is(error.message, "The value 'bar' is not a valid http(s) URL.")
 })

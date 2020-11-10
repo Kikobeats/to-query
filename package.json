@@ -10,7 +10,10 @@
     "url": "https://kikobeats.com"
   },
   "contributors": [
-    "Haroen Viaene <fingebimus@me.com>"
+    {
+      "name": "Haroen Viaene",
+      "email": "fingebimus@me.com"
+    }
   ],
   "repository": {
     "type": "git",
@@ -26,7 +29,7 @@
   "dependencies": {
     "@kikobeats/map-keys-deep": "~1.0.5",
     "auto-parse": "~1.8.0",
-    "lodash": "~4.17.15",
+    "lodash": "~4.17.20",
     "osom": "~3.0.3"
   },
   "devDependencies": {
@@ -72,7 +75,7 @@
     "release:github": "conventional-github-releaser -p angular",
     "release:tags": "git push --follow-tags origin HEAD:master",
     "test": "nyc ava",
-    "update": "ncu -a",
+    "update": "ncu -u",
     "update:check": "ncu -- --error-level 2"
   },
   "license": "MIT",

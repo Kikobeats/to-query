@@ -8,10 +8,7 @@
 </div>
 
 ![Last version](https://img.shields.io/github/tag/Kikobeats/to-query.svg?style=flat-square)
-[![Build Status](https://img.shields.io/travis/com/Kikobeats/to-query/master.svg?style=flat-square)](https://travis-ci.com/Kikobeats/to-query)
 [![Coverage Status](https://img.shields.io/coveralls/Kikobeats/to-query.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/to-query)
-[![Dependency status](https://img.shields.io/david/Kikobeats/to-query.svg?style=flat-square)](https://david-dm.org/Kikobeats/to-query)
-[![Dev Dependencies Status](https://img.shields.io/david/dev/Kikobeats/to-query.svg?style=flat-square)](https://david-dm.org/Kikobeats/to-query#info=devDependencies)
 [![NPM Status](https://img.shields.io/npm/dm/to-query.svg?style=flat-square)](https://www.npmjs.org/package/to-query)
 
 > Get query object from a request url as input.

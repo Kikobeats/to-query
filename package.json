@@ -39,9 +39,9 @@
     "finepack": "latest",
     "git-authors-cli": "latest",
     "git-dirty": "latest",
-    "husky": "latest",
+    "simple-git-hooks": "latest",
     "is-url-http": "latest",
-    "lint-staged": "latest",
+    "nano-staged": "latest",
     "nanobench": "latest",
     "npm-check-updates": "latest",
     "nyc": "latest",
@@ -64,7 +64,7 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
     "postrelease": "npm run release:tags && npm run release:github && ci-publish",
-    "precommit": "lint-staged",
+    "precommit": "nano-staged",
     "prerelease": "npm run update:check",
     "pretest": "npm run lint",
     "pretty": "prettier-standard index.js {core,test,bin,scripts}/**/*.js --single-quote --print-width 100",
@@ -81,13 +81,11 @@
       "@commitlint/config-conventional"
     ]
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
+  "simple-git-hooks": {
+  "commit-msg": "npx commitlint --edit",
+  "pre-commit": "npx nano-staged"
+},
+  "nano-staged": {
     "package.json": [
       "finepack"
     ],

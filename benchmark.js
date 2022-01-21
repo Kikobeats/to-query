@@ -13,7 +13,7 @@ const PAYLOAD =
 bench(`parse v${pkg.version}`, function (b) {
   b.start()
 
-  for (var i = 0; i < ITERATIONS; i++) {
+  for (let i = 0; i < ITERATIONS; i++) {
     parse(PAYLOAD)
   }
 

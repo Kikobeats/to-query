@@ -23,3 +23,16 @@ test('other', t => {
   t.deepEqual(normalize({ foo: 'null' }), { foo: null })
   t.deepEqual(normalize({ foo: 'undefined' }), { foo: undefined })
 })
+
+test('dot access', t => {
+  t.snapshot(
+    normalize({
+      'data.photos.0.attr': 'href',
+      'data.photos.0.selector': '.logos > img',
+      'data.photos.0.trim': true,
+      'data.photos.1.attr': 'href',
+      'data.photos.1.selector': 'img',
+      'data.photos.1.trim': true
+    })
+  )
+})

@@ -1,6 +1,6 @@
 'use strict'
 
-const { isArray, isObject, concat, reduce } = require('lodash')
+const { set, isArray, isObject, concat, reduce } = require('lodash')
 const autoParse = require('auto-parse')
 
 const castValues = value => {
@@ -23,4 +23,14 @@ const castObjectValues = query =>
 const castArrayValues = query =>
   reduce(query, (acc, value) => concat(acc, castValues(value)), [])
 
-module.exports = castObjectValues
+const normalize = query =>
+  reduce(
+    query,
+    (acc, value, key) => {
+      set(acc, key, value === '' ? true : value)
+      return acc
+    },
+    {}
+  )
+
+module.exports = query => castValues(normalize(query))

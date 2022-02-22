@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.6.4 (2022-02-22)
+
+
+### Bug Fixes
+
+* ensure to unflatten values ([7e0804e](https://github.com/Kikobeats/to-query/commit/7e0804e20dc96c141f0dbb7ffe81a84c738b2371))
+
 ### 1.6.3 (2022-02-21)
 
 ### 1.6.2 (2022-01-21)

@@ -29,8 +29,8 @@
   "dependencies": {
     "@kikobeats/map-keys-deep": "~1.0.5",
     "auto-parse": "~1.8.0",
-    "lodash": "~4.17.20",
-    "osom": "~3.0.3"
+    "lodash": "~4.17.21",
+    "osom": "~3.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",

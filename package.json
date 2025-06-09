@@ -9,12 +9,7 @@
     "name": "Kiko Beats",
     "url": "https://kikobeats.com"
   },
-  "contributors": [
-    {
-      "name": "Haroen Viaene",
-      "email": "fingebimus@me.com"
-    }
-  ],
+  "contributors": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kikobeats/to-query.git"

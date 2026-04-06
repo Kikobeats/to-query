@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "@kikobeats/map-keys-deep": "~1.0.5",
-    "auto-parse": "~2.4.0",
+    "auto-parse": "~2.5.0",
     "lodash": "~4.18.1",
     "osom": "~3.1.2"
   },

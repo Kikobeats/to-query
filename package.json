@@ -1,6 +1,6 @@
 {
   "name": "to-query",
-  "description": "Get query object from a request url",
+  "description": "Parse a request URL into a typed query object with camelCase keys, booleans, and number casting.",
   "homepage": "https://github.com/Kikobeats/to-query",
   "version": "1.6.22",
   "main": "index.js",
@@ -24,7 +24,15 @@
   },
   "keywords": [
     "api",
-    "query"
+    "boolean",
+    "camelcase",
+    "cast",
+    "params",
+    "parse",
+    "query",
+    "querystring",
+    "request",
+    "url"
   ],
   "dependencies": {
     "@kikobeats/map-keys-deep": "~1.0.5",
@@ -38,13 +46,11 @@
     "ava": "latest",
     "c8": "latest",
     "ci-publish": "latest",
-    "conventional-github-releaser": "latest",
     "finepack": "latest",
     "git-authors-cli": "latest",
+    "github-generate-release": "latest",
     "is-url-http": "latest",
     "nano-staged": "latest",
-    "npm-check-updates": "latest",
-    "prettier-standard": "latest",
     "simple-git-hooks": "latest",
     "standard": "latest",
     "standard-markdown": "latest",
@@ -65,25 +71,29 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown README.md && standard",
     "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
-    "prerelease": "npm run update:check && npm run contributors",
+    "prerelease": "npm run contributors",
     "pretest": "npm run lint",
     "pretty": "prettier-standard index.js {core,test,bin,scripts}/**/*.js --single-quote --print-width 100",
     "release": "standard-version -a",
-    "release:github": "conventional-github-releaser -p angular",
+    "release:github": "github-generate-release",
     "release:tags": "git push --follow-tags origin HEAD:master",
-    "test": "c8 ava",
-    "update": "ncu -u",
-    "update:check": "ncu -- --error-level 2"
+    "test": "c8 ava"
   },
   "license": "MIT",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
+    ],
+    "rules": {
+      "body-max-line-length": [
+        0
+      ]
+    }
   },
   "nano-staged": {
     "*.js": [
-      "prettier-standard"
+      "npx @kikobeats/prettier-standard",
+      "standard --fix"
     ],
     "*.md": [
       "standard-markdown"
